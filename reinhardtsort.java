@@ -16,13 +16,16 @@ in doing so, you have to shuffle the whole list from the index pointer to the en
 number that is larger and left of the index pointer, so it has to be saved in memory so that it can be copied in at the end of the list. 
 Doing this, it requires a LOT of array accesses, but only one integer worth of memory space for stuff, and the pointers and so on. 
 
-this sorting algorithm is not "stable" im pretty sure that it could rearrange numbers of the same value but I could be wrong. it certainly moves them about. 
+this sorting algorithm is not "stable" im pretty sure that it could rearrange numbers of the same value but I could be wrong. it
+ certainly moves them about. 
 
 however it doesn't use that pesky recursion! it is a simple nested for loop arrangement 
 which merely cleverly re-sets its own pointer to make sure that if it completes an operation to check the list over again. 
-this is important because like "bubblesort" it is reliant on list elements working their way towards the beginning in a sort of natural process. 
-I think that technically speaking instead of re-setting the pointer to zero after a completed loop iteration it actually only needs to be re-set to the previous 
-pointer value minus one, which would save a few compare operations each time, but even doing this I think it would still be in exponential time. 
+this is important because like "bubblesort" it is reliant on list elements working their way towards the beginning in a sort of natural
+ process. 
+I think that technically speaking instead of re-setting the pointer to zero after a completed loop iteration it actually only needs to 
+be re-set to the previous pointer value minus one, which would save a few compare operations each time, but even doing this I think it 
+would still be in exponential time. 
 
 the list is sorted when the pointer reaches the final value without making a change to the list.
  */
